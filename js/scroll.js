@@ -19,6 +19,7 @@ function $px(x) {
     var mround = function (r) { return r >> 0; };
     var vendor = (/webkit/i).test(navigator.appVersion) ? 'webkit' :
         (/firefox/i).test(navigator.userAgent) ? 'Moz' :
+        (/ms/i).test(navigator.userAgent) ? 'ms' :
             'opera' in window ? 'O' : '';
     //touch extention
     var isAndroid = (/android/gi).test(navigator.appVersion);
@@ -78,8 +79,12 @@ function $px(x) {
             that._bind(END_EV, that.wrapper);
             that._bind(CANCEL_EV, that.wrapper);
 
-
-            that.wrapper.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);
+            if (that.wrapper.addEventListener) {
+                // IE9+, Opera, Chrome/Safari
+                that.wrapper.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);
+            } else { // IE<9
+                that.wrapper.attachEvent('touchmove', function (e) { e.preventDefault(); });
+            }
 
         },
 
@@ -334,16 +339,33 @@ function $px(x) {
         activateDisabler:function () {
             var that = this;
             that.disabler = $(that.options.disabler);
-            that.disabler.addEventListener("click", function (event) {
-                var target = event.target;
-                if (target.checked) {
-                    that.wrapper.style.opacity = 0.5;
-                    that.options.enabled = false;
-                } else {
-                    that.wrapper.style.opacity = 1;
-                    that.options.enabled = true;
-                }
-            }, false);
+
+            if (that.disabler.addEventListener) {
+                // IE9+, Opera, Chrome/Safari
+                that.disabler.addEventListener("click", function (event) {
+                    var target = event.target;
+                    if (target.checked) {
+                        that.wrapper.style.opacity = 0.5;
+                        that.options.enabled = false;
+                    } else {
+                        that.wrapper.style.opacity = 1;
+                        that.options.enabled = true;
+                    }
+                }, false);
+            } else {
+                that.disabler.attachEvent("click", function (event) {
+                    var target = event.target;
+                    if (target.checked) {
+                        that.wrapper.style.opacity = 0.5;
+                        that.options.enabled = false;
+                    } else {
+                        that.wrapper.style.opacity = 1;
+                        that.options.enabled = true;
+                    }
+                });
+            }
+
+
 
 
         },
@@ -398,7 +420,7 @@ function $px(x) {
                 // IE9+, Opera, Chrome/Safari (можно onmousehweel = ...)
                 el.addEventListener(type, this, !!bubble);
             } else { // IE<9
-                el.attachEvent(type, !!bubble);
+                el.attachEvent(type);
             }
         },
 
