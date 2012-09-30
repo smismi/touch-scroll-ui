@@ -14,20 +14,20 @@
                 new Scroll(
                         "scroll",
                         {
-                            w: 400, h: 200,
-                            disabler:"check_enabled"
+                            w: 800, h: 200,
+                            disabler: "check_enabled"
                         });
                 new Scroll(
-                        "srbkwepe",
+                        "scroll2",
                         {
-                            w: 400, h: 100,
-                            disabler:"check_enabled"
+                            w: 800, h: 100,
+                            disabler: "scroll2_enabled"
                         });
                 new Scroll(
                             "iconset",
                             {
                                 w: 400, h: 54,
-                                disabler:"check_enabled",
+                                disabler: "iconset_enabled",
                                 vScroll: false,
                                 hScroll: true
                             });
@@ -37,11 +37,61 @@
 </head>
 <body id="mainflow">
 
-<header id="header">header -ololo</header>
-<input type="checkbox" id="check_enabled">
+<header id="header">header</header>
+<div id="playground">
 
-<div id="scroll">
-    <ul>
+    <div class="ctrl">
+        <label>
+            <input type="checkbox" id="check_enabled"> ON/OFF
+        </label>
+    </div>
+
+    <div id="scroll">
+        <ul>
+            <li>Посещаемость  </li>
+            <li>Источники     </li>
+            <li>Посетители    </li>
+            <li>Содержание    </li>
+            <li>Конверсии     </li>
+            <li>Поведение     </li>
+            <li>Технологии    </li>
+            <li>Конструктор   </li>
+            <li>Мониторинг    </li>
+            <li>Конверсии     </li>
+            <li>Поведение     </li>
+            <li>Технологии    </li>
+            <li>Источники     </li>
+            <li>Посетители    </li>
+            <li>Содержание    </li>
+            <li>Конверсии     </li>
+            <li>Поведение     </li>
+            <li>Технологии    </li>
+            <li>Конструктор   </li>
+            <li>Мониторинг    </li>
+            <li>Конверсии     </li>
+            <li>Поведение     </li>
+            <li>Технологии    </li>
+            <li>Источники     </li>
+            <li>Посетители    </li>
+            <li>Содержание    </li>
+            <li>Конверсии     </li>
+            <li>Поведение     </li>
+            <li>Технологии    </li>
+            <li>Конструктор   </li>
+            <li>Мониторинг    </li>
+            <li>Конверсии     </li>
+            <li>Поведение     </li>
+            <li>Технологии    </li>
+            <li>Конструктор   </li>
+            <li>Мониторинг    </li>
+        </ul>
+    </div>
+    <div class="ctrl">
+        <label>
+            <input type="checkbox" id="scroll2_enabled"> ON/OFF
+        </label>
+    </div>
+    <ul id="scroll2">
         <li>Посещаемость  </li>
         <li>Источники     </li>
         <li>Посетители    </li>
@@ -79,108 +129,58 @@
         <li>Конструктор   </li>
         <li>Мониторинг    </li>
     </ul>
+
+
+    <div class="ctrl">
+        <label>
+            <input type="checkbox" id="iconset_enabled"> ON/OFF
+        </label>
+    </div>
+    <ul id="iconset" class="iconset">
+        <li><img src="images/01.jpg" alt="Первая"     title="Первая"   ></li>
+        <li><img src="images/02.jpg" alt="Вторая"     title="Вторая"   ></li>
+        <li><img src="images/03.jpg" alt="Третья"     title="Третья"   ></li>
+        <li><img src="images/04.jpg" alt="Четверная"  title="Четверная"></li>
+        <li><img src="images/05.jpg" alt="Пятая"      title="Пятая"    ></li>
+        <li><img src="images/06.jpg" alt="Шестая"     title="Шестая"   ></li>
+        <li><img src="images/07.jpg" alt="Следущая"   title="Следущая" ></li>
+        <li><img src="images/08.jpg" alt="Следущая"   title="Следущая" ></li>
+        <li><img src="images/09.jpg" alt="Следущая"   title="Следущая" ></li>
+        <li><img src="images/10.jpg" alt="Следущая"   title="Следущая" ></li>
+        <li><img src="images/11.jpg" alt="Последняя"  title="Последняя"></li>
+        <li><img src="images/01.jpg" alt="Первая"     title="Первая"   ></li>
+        <li><img src="images/02.jpg" alt="Вторая"     title="Вторая"   ></li>
+        <li><img src="images/03.jpg" alt="Третья"     title="Третья"   ></li>
+        <li><img src="images/04.jpg" alt="Четверная"  title="Четверная"></li>
+        <li><img src="images/05.jpg" alt="Пятая"      title="Пятая"    ></li>
+        <li><img src="images/06.jpg" alt="Шестая"     title="Шестая"   ></li>
+        <li><img src="images/07.jpg" alt="Следущая"   title="Следущая" ></li>
+        <li><img src="images/08.jpg" alt="Следущая"   title="Следущая" ></li>
+        <li><img src="images/09.jpg" alt="Следущая"   title="Следущая" ></li>
+        <li><img src="images/10.jpg" alt="Следущая"   title="Следущая" ></li>
+        <li><img src="images/11.jpg" alt="Последняя"  title="Последняя"></li>
+        <li><img src="images/01.jpg" alt="Первая"     title="Первая"   ></li>
+        <li><img src="images/02.jpg" alt="Вторая"     title="Вторая"   ></li>
+        <li><img src="images/03.jpg" alt="Третья"     title="Третья"   ></li>
+        <li><img src="images/04.jpg" alt="Четверная"  title="Четверная"></li>
+        <li><img src="images/05.jpg" alt="Пятая"      title="Пятая"    ></li>
+        <li><img src="images/06.jpg" alt="Шестая"     title="Шестая"   ></li>
+        <li><img src="images/07.jpg" alt="Следущая"   title="Следущая" ></li>
+        <li><img src="images/08.jpg" alt="Следущая"   title="Следущая" ></li>
+        <li><img src="images/09.jpg" alt="Следущая"   title="Следущая" ></li>
+        <li><img src="images/10.jpg" alt="Следущая"   title="Следущая" ></li>
+        <li><img src="images/11.jpg" alt="Последняя"  title="Последняя"></li>
+    </ul>
+
+
+
 </div>
-
-<ul id="srbkwepe">
-    <li>Посещаемость  </li>
-    <li>Источники     </li>
-    <li>Посетители    </li>
-    <li>Содержание    </li>
-    <li>Конверсии     </li>
-    <li>Поведение     </li>
-    <li>Технологии    </li>
-    <li>Конструктор   </li>
-    <li>Мониторинг    </li>
-    <li>Конверсии     </li>
-    <li>Поведение     </li>
-    <li>Технологии    </li>
-    <li>Источники     </li>
-    <li>Посетители    </li>
-    <li>Содержание    </li>
-    <li>Конверсии     </li>
-    <li>Поведение     </li>
-    <li>Технологии    </li>
-    <li>Конструктор   </li>
-    <li>Мониторинг    </li>
-    <li>Конверсии     </li>
-    <li>Поведение     </li>
-    <li>Технологии    </li>
-    <li>Источники     </li>
-    <li>Посетители    </li>
-    <li>Содержание    </li>
-    <li>Конверсии     </li>
-    <li>Поведение     </li>
-    <li>Технологии    </li>
-    <li>Конструктор   </li>
-    <li>Мониторинг    </li>
-    <li>Конверсии     </li>
-    <li>Поведение     </li>
-    <li>Технологии    </li>
-    <li>Конструктор   </li>
-    <li>Мониторинг    </li>
-</ul>
-
-<style type="text/css">
-    #iconset {
-        /*width: 1000px*/
-        white-space: nowrap;
-    }
-    #iconset li {
-        display: inline-block;
-        padding: 0;
-        margin: 0;
-    }
-    #iconset li img {
-        margin: 0;
-        width: 50px;
-        height: 50px;
-    }
-</style>
-
-<ul id="iconset">
-    <li><img src="images/01.jpg" alt="Первая"     title="Первая"   ></li>
-    <li><img src="images/02.jpg" alt="Вторая"     title="Вторая"   ></li>
-    <li><img src="images/03.jpg" alt="Третья"     title="Третья"   ></li>
-    <li><img src="images/04.jpg" alt="Четверная"  title="Четверная"></li>
-    <li><img src="images/05.jpg" alt="Пятая"      title="Пятая"    ></li>
-    <li><img src="images/06.jpg" alt="Шестая"     title="Шестая"   ></li>
-    <li><img src="images/07.jpg" alt="Следущая"   title="Следущая" ></li>
-    <li><img src="images/08.jpg" alt="Следущая"   title="Следущая" ></li>
-    <li><img src="images/09.jpg" alt="Следущая"   title="Следущая" ></li>
-    <li><img src="images/10.jpg" alt="Следущая"   title="Следущая" ></li>
-    <li><img src="images/11.jpg" alt="Последняя"  title="Последняя"></li>
-    <li><img src="images/01.jpg" alt="Первая"     title="Первая"   ></li>
-    <li><img src="images/02.jpg" alt="Вторая"     title="Вторая"   ></li>
-    <li><img src="images/03.jpg" alt="Третья"     title="Третья"   ></li>
-    <li><img src="images/04.jpg" alt="Четверная"  title="Четверная"></li>
-    <li><img src="images/05.jpg" alt="Пятая"      title="Пятая"    ></li>
-    <li><img src="images/06.jpg" alt="Шестая"     title="Шестая"   ></li>
-    <li><img src="images/07.jpg" alt="Следущая"   title="Следущая" ></li>
-    <li><img src="images/08.jpg" alt="Следущая"   title="Следущая" ></li>
-    <li><img src="images/09.jpg" alt="Следущая"   title="Следущая" ></li>
-    <li><img src="images/10.jpg" alt="Следущая"   title="Следущая" ></li>
-    <li><img src="images/11.jpg" alt="Последняя"  title="Последняя"></li>
-    <li><img src="images/01.jpg" alt="Первая"     title="Первая"   ></li>
-    <li><img src="images/02.jpg" alt="Вторая"     title="Вторая"   ></li>
-    <li><img src="images/03.jpg" alt="Третья"     title="Третья"   ></li>
-    <li><img src="images/04.jpg" alt="Четверная"  title="Четверная"></li>
-    <li><img src="images/05.jpg" alt="Пятая"      title="Пятая"    ></li>
-    <li><img src="images/06.jpg" alt="Шестая"     title="Шестая"   ></li>
-    <li><img src="images/07.jpg" alt="Следущая"   title="Следущая" ></li>
-    <li><img src="images/08.jpg" alt="Следущая"   title="Следущая" ></li>
-    <li><img src="images/09.jpg" alt="Следущая"   title="Следущая" ></li>
-    <li><img src="images/10.jpg" alt="Следущая"   title="Следущая" ></li>
-    <li><img src="images/11.jpg" alt="Последняя"  title="Последняя"></li>
-</ul>
-
-
-
 
 <aside id="log" class="log_fixed">log:</aside>
 
 
 
-<footer>footer</footer>
+<footer id="#footer">footer</footer>
 
 
 <script type="text/javascript">

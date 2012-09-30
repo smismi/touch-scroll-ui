@@ -1,23 +1,41 @@
-.wrapper {
-    position: relative;
-    border: 1px solid green;
-    background: white;
-    font-size: 12px;
-    overflow: hidden;
-}
-
-
 body,ul,li {
     padding:0;
     margin:0;
     border:0;
 }
 
+html {
+    background: #4a4a4a;
+}
 body {
     font-size:44px;
-    /*-webkit-user-select:none;*/
-    /*-webkit-text-size-adjust:none;*/
+    -webkit-user-select:none;
+    -webkit-text-size-adjust:none;
     font-family:helvetica;
+    padding: 50px;
+    color: #333;
+}
+
+#mainflow {
+    width: 1000px;
+    margin: 0 auto;
+    border:2px solid #7a7a7a;
+    background: #f2f2f2;
+
+}
+#header {
+    border-bottom: 1px solid #dcdcdc;
+    position: relative;
+}
+
+#playground {
+    border-top: 1px solid #fbfbfb;
+    border-bottom: 1px solid #dcdcdc;
+    padding: 12px 0;
+}
+#footer {
+    border-bottom: 1px solid #fbfbfb;
+    position: relative;
 }
 
 .log_fixed {
@@ -32,13 +50,37 @@ body {
     overflow: auto;
 }
 
-.section {
-    width: 300px;
-    position: relative;
+.ctrl {
+    float: right;
+    width: 180px;
+    font-size: 16px;
+    margin-top: 12px;
 }
-#header {
-    position: relative;
+
+#iconset {
+    /*width: 1000px*/
+    white-space: nowrap;
 }
+#iconset li {
+    display: inline-block;
+    padding: 0;
+    margin: 0;
+}
+#iconset li img {
+    margin: 0;
+    width: 50px;
+    height: 50px;
+}
+/*plugin*/
+.wrapper {
+    position: relative;
+    border:2px solid #dcd9df;
+    background: white;
+    font-size: 12px;
+    overflow: hidden;
+    margin-top: 12px;
+}
+
 .scrollwrapper {
     position: relative;
     overflow: hidden;

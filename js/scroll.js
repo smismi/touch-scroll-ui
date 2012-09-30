@@ -4,7 +4,6 @@
  * Date: 09.08.12
  * Time: 21:30
  * To change this template use File | Settings | File Templates.
- * ololoolo
  */
 
 function $(el) {
@@ -19,6 +18,7 @@ function $px(x) {
     var mround = function (r) { return r >> 0; };
     var vendor = (/webkit/i).test(navigator.appVersion) ? 'webkit' :
         (/firefox/i).test(navigator.userAgent) ? 'Moz' :
+        (/MSIE/i).test(navigator.userAgent) ? 'ms' :
             'opera' in window ? 'O' : '';
     //touch extention
     var isAndroid = (/android/gi).test(navigator.appVersion);
@@ -82,10 +82,6 @@ function $px(x) {
             that.wrapper.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);
 
         },
-
-
-
-
 //    action
         handleEvent: function (e) {
                 var that = this;
@@ -178,7 +174,8 @@ function $px(x) {
             that.startTime = e.timeStamp || Date.now();
 
             if (that.options.onScrollStart) that.options.onScrollStart.call(that, e);
-            //вот такая вот хуйня
+            that._log('_start');
+
         },
         _end: function(e) {
             var that = this;
@@ -205,7 +202,7 @@ function $px(x) {
             that.pointY = point.pageY;
 
             // Slow down if outside of the boundaries
-            that._log(that.height + ' ' + that.h);
+//            that._log(that.height + ' ' + that.h);
 
             if (newY > 0) {
                 newY = 0;
@@ -273,7 +270,6 @@ function $px(x) {
                 this.scroller.style.top = $px(y);
             }
 
-            //that._log(this.x +' ' + this.y);
             this.x = x;
             this.y = y;
             that.fadeInScroll();
@@ -329,7 +325,7 @@ function $px(x) {
 
             that.width = el.clientWidth;
             that.height = el.clientHeight;
-            that._log(that.width + " " + that.height)
+//            that._log(that.width + " " + that.height)
         },
         activateDisabler:function () {
             var that = this;
